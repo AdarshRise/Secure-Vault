@@ -24,5 +24,10 @@ namespace SecureVault
         {
             InitializeComponent();
         }
+
+        private void LoginBut_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

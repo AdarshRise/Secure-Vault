@@ -23,6 +23,8 @@ namespace SecureVault
         public MainWindow()
         {
             InitializeComponent();
+            UserControl usc = new Tab1();
+            GridMain.Children.Add(usc);
         }
 
 
@@ -42,8 +44,9 @@ namespace SecureVault
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UserControl usc = null;
+            
             GridMain.Children.Clear();
-
+            
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
                 case "ItemHome":
