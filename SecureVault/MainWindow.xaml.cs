@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
+using AutoUpdaterDotNET;
 
 namespace SecureVault
 {
@@ -20,6 +22,14 @@ namespace SecureVault
     /// </summary>
     public partial class MainWindow : Window
     {
+        private void AutoUpdater_ApplicationExitEvent()
+        {
+           string Text = @"Closing application...";
+            Thread.Sleep(5000);
+            Application.Current.Shutdown();
+        }
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -75,6 +85,17 @@ namespace SecureVault
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
+
+            try
+            {
+                AutoUpdater.DownloadPath = Environment.CurrentDirectory;
+                AutoUpdater.Start("https://www.dropbox.com/s/h8gy8pk9fe5i3a7/update.xml?dl=1");
+                AutoUpdater.ApplicationExitEvent += AutoUpdater_ApplicationExitEvent;
+            }
+            catch (Exception tr)
+            {
+                MessageBox.Show("Error in update, send this screenshot to developer:-" + tr.ToString());
+            }
 
         }
 
