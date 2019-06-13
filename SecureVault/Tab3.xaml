@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="SecureVault.Tab3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SecureVault"
+             mc:Ignorable="d" 
+             d:DesignHeight="540" d:DesignWidth="1010"
+             Background="BlueViolet">
+    <Grid>
+        <Image Source="Source/DoorLock.jpg" Width="1010" Height="540" Stretch="UniformToFill"/>
+        <Canvas Margin="0,0,9.6,0">
+            <TextBlock Canvas.Left="311" TextWrapping="Wrap" Foreground="BurlyWood" Text="The Vault" Canvas.Top="47" FontFamily="Rosewood Std Regular" FontSize="72" Height="79" Width="386" FontStretch="SemiExpanded" FontWeight="Bold">
+                <TextBlock.Effect>
+                    <BlurEffect Radius="3"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBlock Canvas.Left="171" TextWrapping="Wrap" Text="Record" Canvas.Top="149" Foreground="BurlyWood"  FontFamily="Poplar Std" FontSize="30" Height="44" Width="87" FontStretch="SemiExpanded" FontWeight="SemiBold">
+                <TextBlock.Effect>
+                    <DropShadowEffect BlurRadius="1" ShadowDepth="1"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBlock Canvas.Left="105" TextWrapping="Wrap" Text="WebId" Canvas.Top="227" FontSize="27" Foreground="Aqua" FontFamily="Segoe Print"/>
+            <TextBlock Canvas.Left="87" TextWrapping="Wrap" Text="Password" FontSize="24" FontFamily="Segoe Print" Foreground="Aqua" Canvas.Top="300"/>
+            <TextBox HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Foreground="Aqua" Width="155" Canvas.Left="227" Canvas.Top="240"/>
+            <TextBox Height="31" Canvas.Left="227" TextWrapping="Wrap" Text="TextBox" Canvas.Top="311" Width="155" Foreground="Aqua" RenderTransformOrigin="0.495,0.954"/>
+            <Button Content="Load" Canvas.Left="209" Canvas.Top="372" Width="75"/>
+
+            <TextBlock TextWrapping="Wrap" Canvas.Left="726" Text="Read" Canvas.Top="149" Foreground="BurlyWood"  FontFamily="Poplar Std" FontSize="30" Height="44" Width="87" FontStretch="SemiExpanded" FontWeight="SemiBold">
+                <TextBlock.Effect>
+                    <DropShadowEffect BlurRadius="1" ShadowDepth="1"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBlock Canvas.Left="597" TextWrapping="Wrap" Text="WebId" Canvas.Top="227" Foreground="Aqua" FontSize="27" FontFamily="Segoe Print"/>
+            <TextBlock Canvas.Left="566" TextWrapping="Wrap" Text="Password" FontSize="24" Foreground="Aqua" FontFamily="Segoe Print" Canvas.Top="300"/>
+            <TextBox HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="TextBox" Foreground="Aqua" VerticalAlignment="Top" Width="164" Canvas.Left="726" Canvas.Top="240"/>
+            <TextBox Height="31" Canvas.Left="726" TextWrapping="Wrap" IsReadOnly="True" Foreground="Aqua" Canvas.Top="307" Width="164" RenderTransformOrigin="0.495,0.954"/>
+            <Button Content="UnLoad" Canvas.Left="738" Canvas.Top="372" Width="90"/>
+
+        </Canvas>
+    </Grid>
+</UserControl>

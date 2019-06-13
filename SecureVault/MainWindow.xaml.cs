@@ -49,22 +49,43 @@ namespace SecureVault
             
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
-                case "ItemHome":
+                case "ItemLogin":
                     usc = new Tab1();
                     GridMain.Children.Add(usc);
                     break;
-                case "ItemCreate":
-                    usc = new Tab1();
+                case "ItemRegister":
+                    usc = new tab2();
                     GridMain.Children.Add(usc);
                     break;
+                case "ItemRecord":
+                    usc = new Tab3();
+                    GridMain.Children.Add(usc);
+                    break;
+                
                 default:
                     break;
             }
         }
 
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        { 
+            // Change this later
+            Application.Current.Shutdown();
+        }
 
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
 
+        private void Min_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized; 
+        }
+        private void Pow_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
 
     }
 

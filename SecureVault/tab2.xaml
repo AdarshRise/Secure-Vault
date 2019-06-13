@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="SecureVault.tab2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SecureVault"
+             mc:Ignorable="d" 
+             d:DesignHeight="540" d:DesignWidth="1010"
+             Background="AntiqueWhite"
+             >
+    <Grid>
+        <Image Source="Source/BigLock.jpg" Width="1010" Height="540" Stretch="UniformToFill"/>
+        <Canvas Margin="0 0 0 300">
+            <TextBlock Text="Register" Foreground="Crimson" Canvas.Left="104" Canvas.Top="28" FontFamily="Stencil Std" FontSize="72" TextDecorations="Underline" FontStretch="SemiExpanded" FontWeight="SemiBold">
+                <TextBlock.Effect>
+                    <BlurEffect Radius="3" RenderingBias="Quality"/>
+                </TextBlock.Effect>
+            </TextBlock>
+        </Canvas>
+        <Grid Margin="0 150 0 100 ">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="163*"></ColumnDefinition>
+                <ColumnDefinition Width="237*"></ColumnDefinition>
+                <ColumnDefinition Width="270*"></ColumnDefinition>
+                <ColumnDefinition Width="130*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="58.8,11,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="83"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="24.8,59,0,0" TextWrapping="Wrap" Text="Secure Id" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="181"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="9.8,155,0,0" TextWrapping="Wrap" Text="Re-PassWord" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Width="217"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="24.8,107,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="181"/>
+            <TextBox Name="nametxt" Grid.Column="2" HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="24"/>
+            <TextBox Name="Idtxt" Grid.Column="2" HorizontalAlignment="Left" Height="32" Margin="10,59,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="24"/>
+            <TextBox Name="Passtxt" Grid.Column="2" HorizontalAlignment="Left" Height="32" Margin="10,107,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="24"/>
+            <TextBox Name="RePasstxt" Grid.Column="2" HorizontalAlignment="Left" Height="32" Margin="10,155,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="24"/>
+        </Grid>
+        <Grid Margin="0 350 0 0">
+            <Button Content="Register" HorizontalAlignment="Left" Margin="793,59,0,0" VerticalAlignment="Top" Width="180" Height="41" FontFamily="Segoe Print"/>
+
+        </Grid>
+    </Grid>
+</UserControl>

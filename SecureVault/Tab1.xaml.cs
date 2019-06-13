@@ -12,22 +12,109 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SQLite;
 
 namespace SecureVault
 {
     /// <summary>
     /// Interaction logic for Tab1.xaml
     /// </summary>
+    /// 
+
+    public class Register
+    {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Password { get; set; }
+    }
+
+    public class Record
+    {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        [Indexed]
+        public string EmailId { get; set; }
+        [NotNull]
+        public decimal Password { get; set; }
+    }
+
+
     public partial class Tab1 : UserControl
     {
+
+        static String databasePath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WinFile.db"); // new location
+        SQLiteConnection db = new SQLiteConnection(databasePath);
+
+
+
+        public static void AddUser(SQLiteConnection db, string name,string pass)
+        {
+            var user = new Register()
+            {
+                Name = name,
+                Password=pass
+            };
+            db.Insert(user);
+            MessageBox.Show("Your Entry Has been Registered, You are our new User now.", " Welcome New User", MessageBoxButton.OK, MessageBoxImage.Information);
+            
+        }
+
+
+        public static void VerifyUser(SQLiteConnection db, string name,string pass)
+        {
+            var user = new Register()
+            {
+                Name = name,
+                Password = pass
+            };
+
+
+            try
+            {
+
+
+
+                //var t= db.Execute("select * from Register where Name = ? and Password = ?", user.Name, user.Password);
+/*
+                var query = db.Table<Register>().Where(v => v.Name.);
+
+                foreach (var stock in query)
+                    Console.WriteLine("Stock: " + stock.Symbol);
+
+
+                MessageBox.Show(" Welcome User, Happy to see you again. ", " Login Successful", MessageBoxButton.OK, MessageBoxImage.Information);
+                */
+
+
+
+
+            }
+            catch( Exception error)
+            {
+                MessageBox.Show(" Error in login, Is your Id and Password Correct? ", " Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(error.ToString());
+            }
+            
+        }
+
+
+
         public Tab1()
         {
             InitializeComponent();
+
+            try
+            {
+                db.CreateTable<Record>();
+                db.CreateTable<Register>();
+            }
+            catch { }
         }
 
         private void LoginBut_Click(object sender, RoutedEventArgs e)
         {
-
+            VerifyUser(db, Logintxt.Text, passtxt.Text); ;
         }
     }
 }

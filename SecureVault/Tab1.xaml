@@ -5,10 +5,38 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SecureVault"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             
+             d:DesignHeight="540" d:DesignWidth="1010"
+             Background="Blue"
              >
     <Grid>
+        <Image Source="Source/HandKey.jpg" Width="1010" Height="540" Stretch="UniformToFill"/>
+        <Grid Margin=" 100 90 100 90" Background="Black" Opacity="0.3"/>
+        <Grid Name="Center_Margin"  Margin=" 100 90 100 90" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel VerticalAlignment="Center" Grid.Column="1" >
+                    <TextBlock  Text="Welcome User" Foreground="LightBlue" Padding="65 0 65 35" FontFamily="Hobo Std" FontSize="24" TextDecorations="Underline">
+                        <TextBlock.Effect>
+                            <DropShadowEffect ShadowDepth="2" Color="#FF853939"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <TextBlock Text="Login"  Padding="100 0 70 0" FontFamily="Simplified Arabic Fixed" FontSize="27px" Foreground="BlueViolet"/>
+                    <TextBox  Name="Logintxt" Margin="10" FontSize="20px" Foreground="Chocolate"/>
+                    <TextBlock Text="Password" FontWeight="Bold" Padding="80 0 70 0" FontFamily="Simplified Arabic Fixed" FontSize="27px" Foreground="BlueViolet">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="3" BlurRadius="6"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBox  Name="passtxt" Margin="10" FontSize="20px" Foreground="Chocolate"/>
+                    <Button Name="LoginBut" Click="LoginBut_Click" Content="SignIn" FontFamily="Arial" FontSize="20px" Foreground="LightGreen"/>
+
+                </StackPanel>
+            </Grid>
+       
+
         <Grid Name="Left_Margin" Margin="0 0 700 0">
 
         </Grid>
@@ -21,23 +49,6 @@
         <Grid Name="Bottom_Margin" Margin="100 350 100 0 ">
 
         </Grid>
-        <Grid Name="Center_Margin" ShowGridLines="True" Margin=" 100 100 100 100"  >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"></ColumnDefinition>
-                <ColumnDefinition Width="2*"></ColumnDefinition>
-                <ColumnDefinition Width="1*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <StackPanel VerticalAlignment="Center" Grid.Column="1" >
-                <TextBlock  Text="Welcome User" Foreground="Black" Padding="65 0 65 35" FontFamily="Hobo Std" FontSize="24">
-                    <TextBlock.Effect>
-                        <DropShadowEffect ShadowDepth="2" Color="#FF853939"/>
-                    </TextBlock.Effect>
-                </TextBlock>
-                <TextBlock Text="Login"  Padding="100 0 70 0" FontFamily="Simplified Arabic Fixed" FontSize="27px" Foreground="BlueViolet"/>
-                <TextBox  Name="Logintxt" Margin="10" FontSize="20px" Foreground="Chocolate"/>
-                <Button Name="LoginBut" Click="LoginBut_Click" Content="SignIn" FontFamily="Arial" FontSize="20px" Foreground="DarkGreen"/>
-
-            </StackPanel>
-        </Grid>
+        
     </Grid>
 </UserControl>
