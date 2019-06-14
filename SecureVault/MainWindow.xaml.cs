@@ -20,8 +20,15 @@ namespace SecureVault
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
+        static UserControl usc1 = new Tab1();
+        static UserControl usc2 = new tab2();
+        static UserControl usc3 = new Tab3();
+
+
         private void AutoUpdater_ApplicationExitEvent()
         {
            string Text = @"Closing application...";
@@ -60,21 +67,26 @@ namespace SecureVault
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
                 case "ItemLogin":
-                    usc = new Tab1();
-                    GridMain.Children.Add(usc);
+                    //usc = new Tab1();
+                    GridMain.Children.Add(usc1);
+                    
                     break;
                 case "ItemRegister":
-                    usc = new tab2();
-                    GridMain.Children.Add(usc);
+                    //usc = new tab2();
+                    GridMain.Children.Add(usc2);
                     break;
                 case "ItemRecord":
-                    usc = new Tab3();
-                    GridMain.Children.Add(usc);
+                    //usc = new Tab3();
+                    GridMain.Children.Add(usc3);
                     break;
                 
                 default:
                     break;
+            
             }
+            GC.Collect();4
+            // GridMain.Children.Remove(usc);
+            
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
