@@ -40,8 +40,8 @@ namespace SecureVault
         public MainWindow()
         {
             InitializeComponent();
-            UserControl usc = new Tab1();
-            GridMain.Children.Add(usc);
+           // UserControl usc = new Tab1();
+            GridMain.Children.Add(usc1);
         }
 
 
@@ -67,15 +67,25 @@ namespace SecureVault
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
                 case "ItemLogin":
+                    GridMain.Children.Clear();
+                    GridMain.Children.Remove(usc2);
+                    GridMain.Children.Remove(usc3);
+                    
                     //usc = new Tab1();
                     GridMain.Children.Add(usc1);
                     
                     break;
                 case "ItemRegister":
+                    GridMain.Children.Clear();
+                    GridMain.Children.Remove(usc1);
+                    GridMain.Children.Remove(usc3);
                     //usc = new tab2();
                     GridMain.Children.Add(usc2);
                     break;
                 case "ItemRecord":
+                    GridMain.Children.Clear();
+                    GridMain.Children.Remove(usc1);
+                    GridMain.Children.Remove(usc2);
                     //usc = new Tab3();
                     GridMain.Children.Add(usc3);
                     break;
@@ -84,8 +94,8 @@ namespace SecureVault
                     break;
             
             }
-            GC.Collect();4
-            // GridMain.Children.Remove(usc);
+            GC.Collect();
+           // GridMain.Children.Remove(usc);
             
         }
 
@@ -102,6 +112,7 @@ namespace SecureVault
             {
                 AutoUpdater.DownloadPath = Environment.CurrentDirectory;
                 AutoUpdater.Start("https://www.dropbox.com/s/h8gy8pk9fe5i3a7/update.xml?dl=1");
+                AutoUpdater.ReportErrors = true;
                 AutoUpdater.ApplicationExitEvent += AutoUpdater_ApplicationExitEvent;
             }
             catch (Exception tr)

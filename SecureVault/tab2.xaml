@@ -10,13 +10,14 @@
              >
     <Grid>
         <Image Source="Source/BigLock.jpg" Width="1010" Height="540" Stretch="UniformToFill"/>
-        <Canvas Margin="0 0 0 300">
-            <TextBlock Text="Register" Foreground="Crimson" Canvas.Left="104" Canvas.Top="28" FontFamily="Stencil Std" FontSize="72" TextDecorations="Underline" FontStretch="SemiExpanded" FontWeight="SemiBold">
+        <Grid Margin=" 140 130 160 160" Background="Black" Opacity="0.3"/>
+        <Grid Margin="0 0 0 300">
+            <TextBlock Text="Register" Foreground="Crimson" Canvas.Left="104" Canvas.Top="28" FontFamily="Stencil Std" FontSize="72" TextDecorations="Underline" FontStretch="SemiExpanded" FontWeight="SemiBold" Margin="41,37,543.6,113">
                 <TextBlock.Effect>
                     <BlurEffect Radius="3" RenderingBias="Quality"/>
                 </TextBlock.Effect>
             </TextBlock>
-        </Canvas>
+        </Grid>
         <Grid Margin="0 150 0 100 ">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="163*"></ColumnDefinition>
@@ -24,17 +25,18 @@
                 <ColumnDefinition Width="270*"></ColumnDefinition>
                 <ColumnDefinition Width="130*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="58.8,11,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="83"/>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="24.8,59,0,0" TextWrapping="Wrap" Text="Secure Id" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="181"/>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="9.8,155,0,0" TextWrapping="Wrap" Text="Re-PassWord" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Width="217"/>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="24.8,107,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="181"/>
-            <TextBox Name="nametxt" Grid.Column="2" HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="24"/>
-            <TextBox Name="Idtxt" Grid.Column="2" HorizontalAlignment="Left" Height="32" Margin="10,59,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="24"/>
-            <TextBox Name="Passtxt" Grid.Column="2" HorizontalAlignment="Left" Height="32" Margin="10,107,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="24"/>
-            <TextBox Name="RePasstxt" Grid.Column="2" HorizontalAlignment="Left" Height="32" Margin="10,155,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="24"/>
+            <TextBlock Grid.Column="1" Foreground="Beige" HorizontalAlignment="Left" Margin="24.4,11,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="218"/>
+            <TextBlock Grid.Column="1" Foreground="Beige" HorizontalAlignment="Left" Margin="24.4,59,0,0" TextWrapping="Wrap" Text="Vault Id" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="218"/>
+            <TextBlock Grid.Column="1" Foreground="Beige" HorizontalAlignment="Left" Margin="9.4,155,0,0" TextWrapping="Wrap" Text="Re-PassWord" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Width="233"/>
+            <TextBlock Grid.Column="1" Foreground="Beige" HorizontalAlignment="Left" Margin="24.4,107,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="218"/>
+            <TextBox Name="nametxt" Grid.Column="2" MaxLength="21" FontFamily="Consolas" HorizontalAlignment="Left" FontStretch="Medium"  Height="35" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="20"/>
+            <TextBox Name="Idtxt" Grid.Column="2" MaxLength="21" FontFamily="Consolas" HorizontalAlignment="Left" FontStretch="Medium" Height="35" Margin="10,59,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="20"/>
+            <PasswordBox Name="Passtxt" Grid.Column="2" MaxLength="19" HorizontalAlignment="Left" FontStretch="Medium" Height="35" Margin="10,107,0,0"   VerticalAlignment="Top" Width="250" FontSize="20"/>
+            <PasswordBox Name="RePasstxt" Grid.Column="2"  MaxLength="19" HorizontalAlignment="Left" FontStretch="Medium" Height="35" Margin="10.2,155,0,0" PasswordChar="*"  VerticalAlignment="Top" Width="250" FontSize="20" SelectionOpacity="1"/>
+
         </Grid>
         <Grid Margin="0 350 0 0">
-            <Button Content="Register" HorizontalAlignment="Left" Margin="793,59,0,0" VerticalAlignment="Top" Width="180" Height="41" FontFamily="Segoe Print"/>
+            <Button Content="Register" Click="Reg_Click" HorizontalAlignment="Left" Margin="793,59,0,0" VerticalAlignment="Top" Width="180" Height="41" FontFamily="Segoe Print"/>
 
         </Grid>
     </Grid>

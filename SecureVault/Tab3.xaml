@@ -15,12 +15,12 @@
                     <BlurEffect Radius="3"/>
                 </TextBlock.Effect>
             </TextBlock>
-            <TextBlock Canvas.Left="171" TextWrapping="Wrap" Text="Record" Canvas.Top="149" Foreground="BurlyWood"  FontFamily="Poplar Std" FontSize="30" Height="44" Width="87" FontStretch="SemiExpanded" FontWeight="SemiBold">
+            <TextBlock Canvas.Left="171" TextWrapping="Wrap" Text="Record" Canvas.Top="149" Foreground="BurlyWood"  FontFamily="Poplar Std" FontSize="30" Height="44" Width="113" FontStretch="SemiExpanded" FontWeight="SemiBold">
                 <TextBlock.Effect>
                     <DropShadowEffect BlurRadius="1" ShadowDepth="1"/>
                 </TextBlock.Effect>
             </TextBlock>
-            <TextBlock Canvas.Left="105" TextWrapping="Wrap" Text="WebId" Canvas.Top="227" FontSize="27" Foreground="Aqua" FontFamily="Segoe Print"/>
+            <TextBlock Canvas.Left="105" TextWrapping="Wrap" Text="WebId" Canvas.Top="227" FontSize="27" Foreground="Aqua" FontFamily="Segoe Print" Width="96"/>
             <TextBlock Canvas.Left="87" TextWrapping="Wrap" Text="Password" FontSize="24" FontFamily="Segoe Print" Foreground="Aqua" Canvas.Top="300"/>
             <TextBox HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Foreground="Aqua" Width="155" Canvas.Left="227" Canvas.Top="240"/>
             <TextBox Height="31" Canvas.Left="227" TextWrapping="Wrap" Text="TextBox" Canvas.Top="311" Width="155" Foreground="Aqua" RenderTransformOrigin="0.495,0.954"/>
