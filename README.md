@@ -10,7 +10,7 @@ Secure Vault is highly inspired by my old project PassProtect and it's specially
 
 *NOTE for Early Adopters: Secure Vault is in Early Stage and May not Be Safe, Let Alone usable, But do Post your issues, this Project will improve over time.*
 
-Ready to Use? Jump to [Download Link!](https://github.com/AdarshRise/Secure-Vault/releases/download/0.1/SecureVault-PreAlpha.exe)
+Ready to Use? Jump to [Download Link!](https://github.com/AdarshRise/Secure-Vault/releases/download/0.1b/Secure.Vault.exe)
 
 
 [![Build Status](https://img.shields.io/badge/Build-Alpha-brightgreen.svg)]
