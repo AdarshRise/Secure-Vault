@@ -20,8 +20,15 @@ namespace SecureVault
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
+        static UserControl usc1 = new Tab1();
+        static UserControl usc2 = new tab2();
+        static UserControl usc3 = new Tab3();
+
+
         private void AutoUpdater_ApplicationExitEvent()
         {
            string Text = @"Closing application...";
@@ -33,8 +40,11 @@ namespace SecureVault
         public MainWindow()
         {
             InitializeComponent();
-            UserControl usc = new Tab1();
-            GridMain.Children.Add(usc);
+           // UserControl usc = new Tab1();
+            GridMain.Children.Add(usc1);
+            usc1 = null;
+            GC.Collect();
+            
         }
 
 
@@ -53,28 +63,49 @@ namespace SecureVault
 
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            UserControl usc = null;
+            //UserControl usc = null;
             
             GridMain.Children.Clear();
             
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
                 case "ItemLogin":
-                    usc = new Tab1();
-                    GridMain.Children.Add(usc);
+                    usc1 = new Tab1();
+                    GridMain.Children.Clear();
+                    GridMain.Children.Remove(usc2);
+                    GridMain.Children.Remove(usc3);
+                    
+                    //usc = new Tab1();
+                    GridMain.Children.Add(usc1);
+                    usc1 = null;
+                    
                     break;
                 case "ItemRegister":
-                    usc = new tab2();
-                    GridMain.Children.Add(usc);
+                    usc2 = new tab2();
+                    GridMain.Children.Clear();
+                    GridMain.Children.Remove(usc1);
+                    GridMain.Children.Remove(usc3);
+                    //usc = new tab2();
+                    GridMain.Children.Add(usc2);
+                    usc2 = null;
                     break;
                 case "ItemRecord":
-                    usc = new Tab3();
-                    GridMain.Children.Add(usc);
+                    usc3 = new Tab3();
+                    GridMain.Children.Clear();
+                    GridMain.Children.Remove(usc1);
+                    GridMain.Children.Remove(usc2);
+                    //usc = new Tab3();
+                    GridMain.Children.Add(usc3);
+                    usc3= null;
                     break;
                 
                 default:
                     break;
+            
             }
+            GC.Collect();
+           // GridMain.Children.Remove(usc);
+            
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
@@ -90,6 +121,7 @@ namespace SecureVault
             {
                 AutoUpdater.DownloadPath = Environment.CurrentDirectory;
                 AutoUpdater.Start("https://www.dropbox.com/s/h8gy8pk9fe5i3a7/update.xml?dl=1");
+                AutoUpdater.ReportErrors = true;
                 AutoUpdater.ApplicationExitEvent += AutoUpdater_ApplicationExitEvent;
             }
             catch (Exception tr)

@@ -18,7 +18,7 @@
                     <ColumnDefinition Width="1*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <StackPanel VerticalAlignment="Center" Grid.Column="1" >
-                    <TextBlock  Text="Welcome User" Foreground="LightBlue" Padding="65 0 65 35" FontFamily="Hobo Std" FontSize="24" TextDecorations="Underline">
+                    <TextBlock  Text="Welcome User" Foreground="LightBlue" Padding="65 0 65 35" FontFamily="Hobo Std" FontSize="24" TextDecorations="Underline" Margin="2,0,-2.2,0">
                         <TextBlock.Effect>
                             <DropShadowEffect ShadowDepth="2" Color="#FF853939"/>
                         </TextBlock.Effect>
@@ -30,8 +30,8 @@
                         <DropShadowEffect ShadowDepth="3" BlurRadius="6"/>
                     </TextBlock.Effect>
                 </TextBlock>
-                <TextBox  Name="passtxt" Margin="10" FontSize="20px" Foreground="Chocolate"/>
-                    <Button Name="LoginBut" Click="LoginBut_Click" Content="SignIn" FontFamily="Arial" FontSize="20px" Foreground="LightGreen"/>
+                <TextBox  Name="passtxt" Margin="10" FontSize="20px" Foreground="DarkMagenta"/>
+                    <Button Name="LoginBut" Click="LoginBut_Click" Content="SignIn" FontFamily="Arial" FontSize="20px" Foreground="WhiteSmoke"/>
 
                 </StackPanel>
             </Grid>

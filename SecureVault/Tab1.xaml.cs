@@ -21,23 +21,7 @@ namespace SecureVault
     /// </summary>
     /// 
 
-    public class Register
-    {
-        [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Password { get; set; }
-    }
-
-    public class Record
-    {
-        [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
-        [Indexed]
-        public string EmailId { get; set; }
-        [NotNull]
-        public decimal Password { get; set; }
-    }
+  
 
 
     public partial class Tab1 : UserControl
@@ -104,12 +88,6 @@ namespace SecureVault
         {
             InitializeComponent();
 
-            try
-            {
-                db.CreateTable<Record>();
-                db.CreateTable<Register>();
-            }
-            catch { }
         }
 
         private void LoginBut_Click(object sender, RoutedEventArgs e)

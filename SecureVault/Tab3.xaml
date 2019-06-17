@@ -9,21 +9,23 @@
              Background="BlueViolet">
     <Grid>
         <Image Source="Source/DoorLock.jpg" Width="1010" Height="540" Stretch="UniformToFill"/>
+        <Grid Margin=" 80 130 520 186" Background="White" Opacity="0.13"/>
+        <Grid Margin=" 560 130 20 186" Background="White" Opacity="0.13"/>
         <Canvas Margin="0,0,9.6,0">
-            <TextBlock Canvas.Left="311" TextWrapping="Wrap" Foreground="BurlyWood" Text="The Vault" Canvas.Top="47" FontFamily="Rosewood Std Regular" FontSize="72" Height="79" Width="386" FontStretch="SemiExpanded" FontWeight="Bold">
+            <TextBlock Canvas.Left="327" TextWrapping="Wrap" Foreground="BurlyWood" Text="The Vault" Canvas.Top="31" FontFamily="Rosewood Std Regular" FontSize="72" Height="79" Width="386" FontStretch="SemiExpanded" FontWeight="Bold">
                 <TextBlock.Effect>
                     <BlurEffect Radius="3"/>
                 </TextBlock.Effect>
             </TextBlock>
-            <TextBlock Canvas.Left="171" TextWrapping="Wrap" Text="Record" Canvas.Top="149" Foreground="BurlyWood"  FontFamily="Poplar Std" FontSize="30" Height="44" Width="87" FontStretch="SemiExpanded" FontWeight="SemiBold">
+            <TextBlock Canvas.Left="171" TextWrapping="Wrap" Text="Record" Canvas.Top="149" Foreground="BurlyWood"  FontFamily="Poplar Std" FontSize="30" Height="44" Width="113" FontStretch="SemiExpanded" FontWeight="SemiBold">
                 <TextBlock.Effect>
                     <DropShadowEffect BlurRadius="1" ShadowDepth="1"/>
                 </TextBlock.Effect>
             </TextBlock>
-            <TextBlock Canvas.Left="105" TextWrapping="Wrap" Text="WebId" Canvas.Top="227" FontSize="27" Foreground="Aqua" FontFamily="Segoe Print"/>
-            <TextBlock Canvas.Left="87" TextWrapping="Wrap" Text="Password" FontSize="24" FontFamily="Segoe Print" Foreground="Aqua" Canvas.Top="300"/>
-            <TextBox HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Foreground="Aqua" Width="155" Canvas.Left="227" Canvas.Top="240"/>
-            <TextBox Height="31" Canvas.Left="227" TextWrapping="Wrap" Text="TextBox" Canvas.Top="311" Width="155" Foreground="Aqua" RenderTransformOrigin="0.495,0.954"/>
+            <TextBlock Canvas.Left="85" TextWrapping="Wrap" Text="WebId" Canvas.Top="231" FontSize="27" Foreground="Aqua" FontFamily="Segoe Print" Width="96"/>
+            <TextBlock Canvas.Left="79" TextWrapping="Wrap" Text="Password" FontSize="24" FontFamily="Segoe Print" Foreground="Aqua" Canvas.Top="300"/>
+            <TextBox HorizontalAlignment="Left" Height="35" FontSize="20" MaxLength="21" TextWrapping="Wrap"  VerticalAlignment="Top"  FontFamily="Consolas" FontStretch="Medium"  Width="269" Canvas.Left="213" Canvas.Top="240"/>
+            <TextBox Height="35" Canvas.Left="213" TextWrapping="Wrap" MaxLength="19" FontSize="20" Canvas.Top="311" Width="269" Foreground="Beige" FontFamily="Consolas" FontStretch="Medium"  RenderTransformOrigin="0.495,0.954"/>
             <Button Content="Load" Canvas.Left="209" Canvas.Top="372" Width="75"/>
 
             <TextBlock TextWrapping="Wrap" Canvas.Left="726" Text="Read" Canvas.Top="149" Foreground="BurlyWood"  FontFamily="Poplar Std" FontSize="30" Height="44" Width="87" FontStretch="SemiExpanded" FontWeight="SemiBold">
@@ -31,10 +33,10 @@
                     <DropShadowEffect BlurRadius="1" ShadowDepth="1"/>
                 </TextBlock.Effect>
             </TextBlock>
-            <TextBlock Canvas.Left="597" TextWrapping="Wrap" Text="WebId" Canvas.Top="227" Foreground="Aqua" FontSize="27" FontFamily="Segoe Print"/>
+            <TextBlock Canvas.Left="566" TextWrapping="Wrap" Text="WebId" Canvas.Top="227" Foreground="Aqua" FontSize="27" FontFamily="Segoe Print"/>
             <TextBlock Canvas.Left="566" TextWrapping="Wrap" Text="Password" FontSize="24" Foreground="Aqua" FontFamily="Segoe Print" Canvas.Top="300"/>
-            <TextBox HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="TextBox" Foreground="Aqua" VerticalAlignment="Top" Width="164" Canvas.Left="726" Canvas.Top="240"/>
-            <TextBox Height="31" Canvas.Left="726" TextWrapping="Wrap" IsReadOnly="True" Foreground="Aqua" Canvas.Top="307" Width="164" RenderTransformOrigin="0.495,0.954"/>
+            <TextBox HorizontalAlignment="Left" FontSize="20" Height="35" MaxLength="21" TextWrapping="Wrap" Foreground="Beige" FontFamily="Consolas" FontStretch="Medium"  VerticalAlignment="Top" Width="266" Canvas.Left="710" Canvas.Top="240"/>
+            <TextBox Height="35" Canvas.Left="710" FontSize="20" TextWrapping="Wrap" IsReadOnly="True" Foreground="Beige" FontFamily="Consolas" FontStretch="Medium"  Canvas.Top="307" Width="266" RenderTransformOrigin="0.495,0.954"/>
             <Button Content="UnLoad" Canvas.Left="738" Canvas.Top="372" Width="90"/>
 
         </Canvas>
