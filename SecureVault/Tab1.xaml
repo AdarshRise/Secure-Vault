@@ -9,7 +9,13 @@
              Background="Blue"
              >
     <Grid>
-        <Image Source="Source/HandKey.jpg" Width="1010" Height="540" Stretch="UniformToFill"/>
+        <Image  Width="1010" Height="540" Stretch="UniformToFill">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="280" UriSource="Source/HandKey.jpg"/>
+
+            </Image.Source>
+        
+        </Image>
         <Grid Margin=" 100 90 100 90" Background="Black" Opacity="0.3"/>
         <Grid Name="Center_Margin"  Margin=" 100 90 100 90" >
                 <Grid.ColumnDefinitions>

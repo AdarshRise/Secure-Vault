@@ -8,7 +8,13 @@
              d:DesignHeight="540" d:DesignWidth="1010"
              Background="BlueViolet">
     <Grid>
-        <Image Source="Source/DoorLock.jpg" Width="1010" Height="540" Stretch="UniformToFill"/>
+        <Image    Width="1010" Height="540" Stretch="UniformToFill">
+            <Image.Source>
+
+                <BitmapImage DecodePixelWidth="280" UriSource="Source/DoorLock.jpg"/>
+
+            </Image.Source>
+        </Image>
         <Grid Margin=" 80 130 520 186" Background="White" Opacity="0.13"/>
         <Grid Margin=" 560 130 20 186" Background="White" Opacity="0.13"/>
         <Canvas Margin="0,0,9.6,0">

@@ -9,7 +9,12 @@
              Background="AntiqueWhite"
              >
     <Grid>
-        <Image Source="Source/BigLock.jpg" Width="1010" Height="540" Stretch="UniformToFill"/>
+        <Image  Width="1010" Height="540" Stretch="UniformToFill">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="280" UriSource="Source/BigLock.jpg"/>
+            </Image.Source>
+        </Image>
+
         <Grid Margin=" 140 130 160 160" Background="Black" Opacity="0.3"/>
         <Grid Margin="0 0 0 300">
             <TextBlock Text="Register" Foreground="Crimson" Canvas.Left="104" Canvas.Top="28" FontFamily="Stencil Std" FontSize="72" TextDecorations="Underline" FontStretch="SemiExpanded" FontWeight="SemiBold" Margin="41,37,543.6,113">
