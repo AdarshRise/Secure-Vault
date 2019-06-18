@@ -4,17 +4,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SecureVault"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="1010"
              Background="BlueViolet">
     <Grid>
+        
         <Image    Width="1010" Height="540" Stretch="UniformToFill">
             <Image.Source>
-
                 <BitmapImage DecodePixelWidth="280" UriSource="Source/DoorLock.jpg"/>
-
             </Image.Source>
         </Image>
+        
         <Grid Margin=" 80 130 520 186" Background="White" Opacity="0.13"/>
         <Grid Margin=" 560 130 20 186" Background="White" Opacity="0.13"/>
         <Canvas Margin="0,0,9.6,0">
@@ -30,9 +31,9 @@
             </TextBlock>
             <TextBlock Canvas.Left="85" TextWrapping="Wrap" Text="WebId" Canvas.Top="231" FontSize="27" Foreground="Aqua" FontFamily="Segoe Print" Width="96"/>
             <TextBlock Canvas.Left="79" TextWrapping="Wrap" Text="Password" FontSize="24" FontFamily="Segoe Print" Foreground="Aqua" Canvas.Top="300"/>
-            <TextBox HorizontalAlignment="Left" Height="35" FontSize="20" MaxLength="21" TextWrapping="Wrap"  VerticalAlignment="Top"  FontFamily="Consolas" FontStretch="Medium"  Width="269" Canvas.Left="213" Canvas.Top="240"/>
-            <TextBox Height="35" Canvas.Left="213" TextWrapping="Wrap" MaxLength="19" FontSize="20" Canvas.Top="311" Width="269" Foreground="Beige" FontFamily="Consolas" FontStretch="Medium"  RenderTransformOrigin="0.495,0.954"/>
-            <Button Content="Load" Canvas.Left="209" Canvas.Top="372" Width="75"/>
+            <TextBox Name="Wwebidtxt" materialDesign:HintAssist.Hint="Record Your WebId" Background="Transparent"   materialDesign:HintAssist.IsFloating="True" HorizontalAlignment="Left" Height="40" FontSize="16" MaxLength="27" TextWrapping="Wrap"  VerticalAlignment="Top" Foreground="GreenYellow"  FontFamily="Consolas" FontStretch="Medium"  Width="269" Canvas.Left="213" Canvas.Top="227"/>
+            <TextBox Name="Wpasstxt" materialDesign:HintAssist.Hint="Record It's Password" Background="Transparent"  materialDesign:HintAssist.IsFloating="True" Height="40" Canvas.Left="213" TextWrapping="Wrap" MaxLength="27" FontSize="16" Canvas.Top="300" Width="269" Foreground="GreenYellow" FontFamily="Consolas" FontStretch="Medium"  RenderTransformOrigin="0.495,0.954"/>
+            <Button Content="Load" Click="Load_Click" Canvas.Left="209" Canvas.Top="372" Width="75"/>
 
             <TextBlock TextWrapping="Wrap" Canvas.Left="726" Text="Read" Canvas.Top="149" Foreground="BurlyWood"  FontFamily="Poplar Std" FontSize="30" Height="44" Width="87" FontStretch="SemiExpanded" FontWeight="SemiBold">
                 <TextBlock.Effect>
@@ -41,9 +42,9 @@
             </TextBlock>
             <TextBlock Canvas.Left="566" TextWrapping="Wrap" Text="WebId" Canvas.Top="227" Foreground="Aqua" FontSize="27" FontFamily="Segoe Print"/>
             <TextBlock Canvas.Left="566" TextWrapping="Wrap" Text="Password" FontSize="24" Foreground="Aqua" FontFamily="Segoe Print" Canvas.Top="300"/>
-            <TextBox HorizontalAlignment="Left" FontSize="20" Height="35" MaxLength="21" TextWrapping="Wrap" Foreground="Beige" FontFamily="Consolas" FontStretch="Medium"  VerticalAlignment="Top" Width="266" Canvas.Left="710" Canvas.Top="240"/>
-            <TextBox Height="35" Canvas.Left="710" FontSize="20" TextWrapping="Wrap" IsReadOnly="True" Foreground="Beige" FontFamily="Consolas" FontStretch="Medium"  Canvas.Top="307" Width="266" RenderTransformOrigin="0.495,0.954"/>
-            <Button Content="UnLoad" Canvas.Left="738" Canvas.Top="372" Width="90"/>
+            <TextBox Name="Rwebidtxt" materialDesign:HintAssist.Hint="Enter Your WebId" Background="Transparent"  materialDesign:HintAssist.IsFloating="True" HorizontalAlignment="Left"  MaxLength="27" FontSize="16" Height="40" TextWrapping="Wrap" Foreground="GreenYellow" FontFamily="Consolas" FontStretch="Medium"  VerticalAlignment="Top" Width="266" Canvas.Left="710" Canvas.Top="231"/>
+            <TextBox Name="Rpasstxt" materialDesign:HintAssist.Hint="Press Unload To Get ID " Background="Transparent"  materialDesign:HintAssist.IsFloating="False" Height="40"   Canvas.Left="710" FontSize="16" TextWrapping="Wrap" IsReadOnly="True" Foreground="GreenYellow" FontFamily="Consolas" FontStretch="Medium"  Canvas.Top="300" Width="266" RenderTransformOrigin="0.495,0.954"/>
+            <Button Content="UnLoad" Click="UnLoad_Click" Canvas.Left="738" Canvas.Top="372" Width="90"/>
 
         </Canvas>
     </Grid>

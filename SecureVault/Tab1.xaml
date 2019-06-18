@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:SecureVault"
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="1010"
@@ -29,17 +30,22 @@
                             <DropShadowEffect ShadowDepth="2" Color="#FF853939"/>
                         </TextBlock.Effect>
                     </TextBlock>
-                    <TextBlock Text="Login"  Padding="100 0 70 0" FontFamily="Simplified Arabic Fixed" FontSize="27px" Foreground="BlueViolet"/>
-                    <TextBox  Name="Logintxt" Margin="10" FontSize="20px" Foreground="Chocolate"/>
-                    <TextBlock Text="Password" FontWeight="Bold" Padding="80 0 70 0" FontFamily="Simplified Arabic Fixed" FontSize="27px" Foreground="BlueViolet">
+                    <TextBlock Text="Login"  Padding="100 0 70 0" FontFamily="Simplified Arabic Fixed" FontSize="27px" Foreground="GreenYellow"/>
+                <TextBox  Name="Logintxt"  MaxLength="27" materialDesign:HintAssist.Hint="Enter Your VaultId" Background="Transparent" Height="40" materialDesign:HintAssist.IsFloating="True" Margin="10" FontSize="16" Foreground="LightBlue"/>
+
+                <TextBlock Text="Password" FontWeight="Bold" Padding="80 0 70 0" FontFamily="Simplified Arabic Fixed" FontSize="27px" Foreground="GreenYellow">
                     <TextBlock.Effect>
                         <DropShadowEffect ShadowDepth="3" BlurRadius="6"/>
                     </TextBlock.Effect>
                 </TextBlock>
-                <TextBox  Name="passtxt" Margin="10" FontSize="20px" Foreground="DarkMagenta"/>
-                    <Button Name="LoginBut" Click="LoginBut_Click" Content="SignIn" FontFamily="Arial" FontSize="20px" Foreground="WhiteSmoke"/>
+                <TextBox  Name="passtxt"  MaxLength="27" materialDesign:HintAssist.Hint="Enter Your Vault Unique Password" Background="Transparent" Height="41" materialDesign:HintAssist.IsFloating="True" Margin="10" FontSize="16" />
+                <Button Name="LoginBut" Margin="0 20" Click="LoginBut_Click" Content="SignIn" FontFamily="Charlemagne Std" FontSize="20px" Foreground="LightGoldenrodYellow">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
 
-                </StackPanel>
+            </StackPanel>
             </Grid>
        
 

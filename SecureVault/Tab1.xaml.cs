@@ -92,7 +92,27 @@ namespace SecureVault
 
         private void LoginBut_Click(object sender, RoutedEventArgs e)
         {
-            VerifyUser(db, Logintxt.Text, passtxt.Text); ;
+            //VerifyUser(db, Logintxt.Text, passtxt.Text); ;
+
+
+            if (string.IsNullOrWhiteSpace(Logintxt.Text))
+            {
+                MessageBox.Show("Error in Login Field, Please Check it again.", "Sign In Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+
+            else if (string.IsNullOrWhiteSpace(passtxt.Text))
+            {
+                MessageBox.Show("Error in Password Field, Please Check it again.", "Sign In Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+
+            else
+            {
+                MessageBox.Show("Thanks, This Part is Under-Development, Please Wait for The next Update", "Work In Progress", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+
+
+
         }
     }
 }

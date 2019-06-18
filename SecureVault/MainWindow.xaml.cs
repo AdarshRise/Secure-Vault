@@ -44,6 +44,7 @@ namespace SecureVault
             GridMain.Children.Add(usc1);
             usc1 = null;
             GC.Collect();
+
             
         }
 
@@ -100,6 +101,7 @@ namespace SecureVault
                     break;
                 
                 default:
+                    MessageBox.Show("Thanks, This Part is UnderDevelopment, Please Wait for The next Update", "Work In Progress", MessageBoxButton.OK, MessageBoxImage.Information);
                     break;
             
             }
@@ -109,9 +111,30 @@ namespace SecureVault
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
-        { 
+        {
             // Change this later
-            Application.Current.Shutdown();
+            MessageBox.Show("Thanks, This Part is UnderDevelopment, Please Wait for The next Update", "Work In Progress", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            // Change this later
+            MessageBox.Show("Thanks, This Part is UnderDevelopment, Please Wait for The next Update", "Work In Progress", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void Account_Click(object sender, RoutedEventArgs e)
+        {
+            // Change this later
+            MessageBox.Show("Thanks, This Part is UnderDevelopment, Please Wait for The next Update", "Work In Progress", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+        
+
+
+      private void Help_Click(object sender, RoutedEventArgs e)
+        {
+            // Change this later
+            MessageBox.Show("Thanks, This Part is UnderDevelopment, Please Wait for The next Update", "Work In Progress", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Update_Click(object sender, RoutedEventArgs e)

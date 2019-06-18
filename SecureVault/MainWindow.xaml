@@ -72,9 +72,9 @@
                 <!-- PopupBox-->
                 <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
                     <StackPanel Width="150">
-                        <Button Content="Settings"/>
-                        <Button Content="Account"/>
-                        <Button Content="Help"/>
+                        <Button Content="Settings" Click="Settings_Click" />
+                        <Button Content="Account" Click="Account_Click"/>
+                        <Button Content="Help" Click="Help_Click"/>
                         <Separator/>
                         <Button Click="Logout_Click" Content="Logout"/>
                         <Button Content="Check For Updates" Click="Update_Click"/>
