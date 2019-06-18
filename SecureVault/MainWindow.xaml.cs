@@ -19,6 +19,7 @@ namespace SecureVault
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+    /// Improved memory also
     /// </summary>
     /// 
 
