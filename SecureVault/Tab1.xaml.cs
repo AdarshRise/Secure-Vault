@@ -21,69 +21,10 @@ namespace SecureVault
     /// </summary>
     /// 
 
-  
-
-
-    public partial class Tab1 : UserControl
+  public partial class Tab1 : UserControl
     {
 
-        static String databasePath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WinFile.db"); // new location
-        SQLiteConnection db = new SQLiteConnection(databasePath);
-
-
-
-        public static void AddUser(SQLiteConnection db, string name,string pass)
-        {
-            var user = new Register()
-            {
-                Name = name,
-                Password=pass
-            };
-            db.Insert(user);
-            MessageBox.Show("Your Entry Has been Registered, You are our new User now.", " Welcome New User", MessageBoxButton.OK, MessageBoxImage.Information);
-            
-        }
-
-
-        public static void VerifyUser(SQLiteConnection db, string name,string pass)
-        {
-            var user = new Register()
-            {
-                Name = name,
-                Password = pass
-            };
-
-
-            try
-            {
-
-
-
-                //var t= db.Execute("select * from Register where Name = ? and Password = ?", user.Name, user.Password);
-/*
-                var query = db.Table<Register>().Where(v => v.Name.);
-
-                foreach (var stock in query)
-                    Console.WriteLine("Stock: " + stock.Symbol);
-
-
-                MessageBox.Show(" Welcome User, Happy to see you again. ", " Login Successful", MessageBoxButton.OK, MessageBoxImage.Information);
-                */
-
-
-
-
-            }
-            catch( Exception error)
-            {
-                MessageBox.Show(" Error in login, Is your Id and Password Correct? ", " Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                MessageBox.Show(error.ToString());
-            }
-            
-        }
-
-
-
+        
         public Tab1()
         {
             InitializeComponent();
@@ -92,9 +33,6 @@ namespace SecureVault
 
         private void LoginBut_Click(object sender, RoutedEventArgs e)
         {
-            //VerifyUser(db, Logintxt.Text, passtxt.Text); ;
-
-
             if (string.IsNullOrWhiteSpace(Logintxt.Text))
             {
                 MessageBox.Show("Error in Login Field, Please Check it again.", "Sign In Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -107,7 +45,43 @@ namespace SecureVault
 
             else
             {
-                MessageBox.Show("Thanks, This Part is Under-Development, Please Wait for The next Update", "Work In Progress", MessageBoxButton.OK, MessageBoxImage.Information);
+                //String query = " Record(Id int,EmailID varchar(40) primary key,Password varchar(40) not null );";
+                string query = "select Password  from Register where VaultID='" + Logintxt.Text + "';";
+
+                System.Data.SQLite.SQLiteConnection sqlcon = new System.Data.SQLite.SQLiteConnection(getInfo.dbcon);
+                sqlcon.Open();
+                System.Data.SQLite.SQLiteCommand com = new System.Data.SQLite.SQLiteCommand(query, sqlcon);
+
+                try
+                {
+                    com.ExecuteNonQuery();
+                    System.Data.SQLite.SQLiteDataReader dr = com.ExecuteReader();
+                    dr.Read();
+
+                    //MessageBox.Show(dr["Password"].ToString());
+
+                    if (passtxt.Text == dr["Password"].ToString())
+                    {
+                        MessageBox.Show("Welcome, You have logged In ", "Happy to see you again", MessageBoxButton.OK, MessageBoxImage.Information);
+                       // MessageBox.Show(getInfo.getLog().ToString());
+                        getInfo.setLog();
+                        //MessageBox.Show(getInfo.getLog().ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show(" Error in login, Is your Id and Password Correct? ", " Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(" Error in login, Is your Id and Password Correct? ", " Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(error.ToString());
+                }
+
+                sqlcon.Close();
+
+
             }
 
 

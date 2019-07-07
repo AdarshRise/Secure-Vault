@@ -25,7 +25,7 @@
             </TextBlock>
         </Grid>
 
-       
+
         <Grid Margin="0 150 0 100 ">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="163*"></ColumnDefinition>
@@ -33,14 +33,14 @@
                 <ColumnDefinition Width="270*"></ColumnDefinition>
                 <ColumnDefinition Width="130*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="1" Foreground="Beige"  HorizontalAlignment="Left" Margin="9.4,11,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="233"/>
-            <TextBlock Grid.Column="1" Foreground="Beige" HorizontalAlignment="Left" Margin="10.4,59,0,0" TextWrapping="Wrap" Text="Vault Id" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="232"/>
-            <TextBlock Grid.Column="1" Foreground="Beige" HorizontalAlignment="Left" Margin="9.4,155,0,0" TextWrapping="Wrap" Text="Re-PassWord" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Width="233"/>
-            <TextBlock Grid.Column="1" Foreground="Beige" HorizontalAlignment="Left" Margin="9.4,107,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="233"/>
-            <TextBox materialDesign:HintAssist.Hint="Enter Your Name" Background="Transparent"  materialDesign:HintAssist.IsFloating="True" Name="nametxt"  Grid.Column="2" MaxLength="27" FontFamily="Consolas" HorizontalAlignment="Left" FontStretch="Medium"  Height="40" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="16"/>
-            <TextBox materialDesign:HintAssist.Hint="Enter a Unique Id" Background="Transparent"  materialDesign:HintAssist.IsFloating="True" Name="Idtxt" Grid.Column="2" MaxLength="27" FontFamily="Consolas" HorizontalAlignment="Left" FontStretch="Medium" Height="40" Margin="10,59,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="16"/>
-            <PasswordBox materialDesign:HintAssist.Hint="Enter Your Password" Background="Transparent"  materialDesign:HintAssist.IsFloating="True" Name="Passtxt" Grid.Column="2" MaxLength="25" HorizontalAlignment="Left"  FontStretch="Medium" Height="40" Margin="10,107,0,0"   VerticalAlignment="Top" Width="250" FontSize="16"/>
-            <PasswordBox materialDesign:HintAssist.Hint="Re-Enter Your Password" Background="Transparent"  materialDesign:HintAssist.IsFloating="True" Name="RePasstxt" Grid.Column="2" MaxLength="25" HorizontalAlignment="Left" FontStretch="Medium" Height="40" Margin="10.2,155,0,0"  VerticalAlignment="Top" Width="250" FontSize="16" SelectionOpacity="1"/>
+            <TextBlock Grid.Column="1" Foreground="Beige"  HorizontalAlignment="Center" Margin="37.4,14,28.8,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="233"/>
+            <TextBlock Grid.Column="1" Foreground="Beige" HorizontalAlignment="Center" Margin="38.4,69,28.8,0" TextWrapping="Wrap" Text="Vault Id" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="232"/>
+            <TextBlock Grid.Column="1" Foreground="Beige" HorizontalAlignment="Center" Margin="9.4,176,0,0" TextWrapping="Wrap" Text="Re-PassWord" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Width="233"/>
+            <TextBlock Grid.Column="1" Foreground="Beige" HorizontalAlignment="Center" Margin="9.4,122,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="36" FontFamily="Tekton Pro Ext" Height="43" Width="233"/>
+            <TextBox Name="nametxt" materialDesign:HintAssist.Hint="Enter Your Name" Background="Transparent"  materialDesign:HintAssist.IsFloating="True"   Grid.Column="2" MaxLength="27" FontFamily="Consolas" HorizontalAlignment="Left" FontStretch="Medium"  Height="43" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="16"/>
+            <TextBox Name="Idtxt" materialDesign:HintAssist.Hint="Enter a Unique Id" Background="Transparent"  materialDesign:HintAssist.IsFloating="True"  Grid.Column="2" MaxLength="27" FontFamily="Consolas" HorizontalAlignment="Left" FontStretch="Medium" Height="43" Margin="10.2,66,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250" FontSize="16"/>
+            <PasswordBox Name="Passtxt" materialDesign:HintAssist.Hint="Enter Your Password" Background="Transparent"  materialDesign:HintAssist.IsFloating="True"  Grid.Column="2" MaxLength="25" HorizontalAlignment="Left"  FontStretch="Medium" Height="43" Margin="10.2,119,0,0"   VerticalAlignment="Top" Width="250" FontSize="16"/>
+            <PasswordBox Name="RePasstxt" materialDesign:HintAssist.Hint="Re-Enter Your Password" Background="Transparent"  materialDesign:HintAssist.IsFloating="True"  Grid.Column="2" MaxLength="25" HorizontalAlignment="Left" FontStretch="Medium" Height="43" Margin="10.2,171,0,0"  VerticalAlignment="Top" Width="250" FontSize="16" SelectionOpacity="1"/>
 
         </Grid>
         <Grid Margin="0 350 0 0">

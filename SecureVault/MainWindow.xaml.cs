@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
 using AutoUpdaterDotNET;
+using SQLite;
 
 namespace SecureVault
 {
@@ -23,8 +24,14 @@ namespace SecureVault
     /// </summary>
     /// 
 
+
+  
+
     public partial class MainWindow : Window
     {
+        //static String databasePath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WinFile.db"); // new location
+        //static SQLiteConnection db = new SQLiteConnection(databasePath);
+
         static UserControl usc1 = new Tab1();
         static UserControl usc2 = new tab2();
         static UserControl usc3 = new Tab3();
@@ -32,7 +39,7 @@ namespace SecureVault
 
         private void AutoUpdater_ApplicationExitEvent()
         {
-           string Text = @"Closing application...";
+           //string Text = @"Closing application...";
             Thread.Sleep(5000);
             Application.Current.Shutdown();
         }
@@ -46,7 +53,7 @@ namespace SecureVault
             usc1 = null;
             GC.Collect();
 
-            
+
         }
 
 
@@ -92,13 +99,28 @@ namespace SecureVault
                     usc2 = null;
                     break;
                 case "ItemRecord":
-                    usc3 = new Tab3();
-                    GridMain.Children.Clear();
-                    GridMain.Children.Remove(usc1);
-                    GridMain.Children.Remove(usc2);
-                    //usc = new Tab3();
-                    GridMain.Children.Add(usc3);
-                    usc3= null;
+                    if (getInfo.getLog())
+                    {
+                        usc3 = new Tab3();
+                        GridMain.Children.Clear();
+                        GridMain.Children.Remove(usc1);
+                        GridMain.Children.Remove(usc2);
+                        //usc = new Tab3();
+                        GridMain.Children.Add(usc3);
+                        usc3 = null;
+                    }
+                    else
+                    {
+                        
+                        usc2 = new tab2();
+                        GridMain.Children.Clear();
+                        GridMain.Children.Remove(usc1);
+                        GridMain.Children.Remove(usc3);
+                        //usc = new tab2();
+                        GridMain.Children.Add(usc2);
+                        MessageBox.Show("You need to Login First to Enter the Vault", "Vault Entery Denied", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        usc2 = null;
+                    }
                     break;
                 
                 default:
