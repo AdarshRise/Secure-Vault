@@ -13,7 +13,7 @@ Secure Vault is highly inspired by my old project PassProtect and it's specially
 Ready to Use? Jump to [Download Link!](https://github.com/AdarshRise/Secure-Vault/releases/download/0.3/Secure.Vault.msi)
 
 
-[![Build Status](https://img.shields.io/badge/Build-Alpha-brightgreen.svg)]
+![Build Status](https://img.shields.io/badge/Build-Alpha-brightgreen.svg)
 [![Chat on Discord](https://img.shields.io/discord/426912293134270465.svg?logo=discord)](https://discord.gg/bcDsUmN)
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Follow)](https://twitter.com/adarshrise20)
 
